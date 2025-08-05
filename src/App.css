@@ -1,0 +1,125 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+.btn1{
+  background-color: #87CEEB;
+  font-weight: 500;
+  
+}
+.manobahv{
+  color: #33b8b8;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+.heal1{
+  font-size: 50px;
+
+}
+.heal2{
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  line-height: 35px;
+}
+.you{
+   color:#33b8b8 ;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+.font{
+  font-size: 40px;
+}
+.effect:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px 3px rgb(150, 149, 149);
+ 
+}
+.social{
+  height: 30px;
+  margin: 10px;
+} 
+.cursive{
+  font-family: sans-serif;
+  font-weight: 550;
+  
+}
+.footercolor{
+background-color: #87CEEB;
+}
+.inputborder{
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 8px;
+  /* box-shadow: 2px 2px 8px 2px gray; */
+
+}
+.inputborder1{
+    border: 1px solid silver;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 35px;
+}
+.predcolor{
+  background-color: #6ccccc;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+ }
+ .message{
+  background-color: #6ccccc;
+  font-weight: 700;
+ }
+ .emoji{
+  height: 130px;
+ }
+ .emoji:hover{
+  transform: scale(.8);
+  transition-duration: 0.7s;
+ }
+ .maintain{
+  color: #6ccccc;
+  font-size: 18px;
+  font-weight: 500;
+ }
+ .signbackcolor{
+  background-color: #6ccccc;
+ }

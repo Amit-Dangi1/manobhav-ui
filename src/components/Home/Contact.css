@@ -1,0 +1,8 @@
+.backimg{
+    background-image: url("../../assets/contact2.png");
+    background-size: cover;
+    height: 490px;
+}
+.icons{
+    width: 50px;
+}
