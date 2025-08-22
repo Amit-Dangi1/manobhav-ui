@@ -126,7 +126,7 @@ console.log("Score data = ",res.data.score);
             <div className="text-center">
               <button
                 type="submit"
-                className="btn btn-primary signbackcolor px-4 py-2 fw-semibold rounded-3 shadow-sm"
+                className="btn text-white signbackcolor px-4 py-2 fw-semibold rounded-3 shadow-sm"
               >
                 Submit
               </button>
@@ -152,7 +152,7 @@ console.log("Score data = ",res.data.score);
          <h2 className="text-center mb-4 fw-bold">Your Depression Score</h2>
 
          <div className="d-flex justify-content-center mb-4">
-          <span className="badge bg-primary fs-5 px-4 py-2 signbackcolor">{scoredata.total_score}</span>
+          <span className="badge  fs-5 px-4 py-2 signbackcolor">{scoredata.total_score}</span>
         </div>
 
          <h4 className="text-success text-center">{scoredata.what_it_means}</h4>

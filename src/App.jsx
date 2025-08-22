@@ -16,7 +16,7 @@ import Auth from './components/Auth/Auth'
 import ContactUs from './components/Home/ContactUs'
 import About from './components/Home/About'
 import ScoreFrom from './components/features/ScoreFrom'
-import Feature from './components/features/feature'
+import Feature from './components/features/Feature2'
 import Excersice from './components/features/Excersice'
 import Journal from './components/features/Journal'
 
