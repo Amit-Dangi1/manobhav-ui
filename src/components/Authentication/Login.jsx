@@ -37,7 +37,7 @@ const Login = () => {
     <>
     <ToastContainer/>
       {/* <div className="d-flex justify-content-center align-items-center vh-100"> */}
-        <div className="container p-4 vh-100 d-flex align-items-center">
+        <div className="container p-4 vh-100 d-flex align-items-center ">
         <div className='row w-100'>
            <div className='col-lg-6 col-md-6 d-flex flex-column justify-content-center rounded p-5 shadow'>
             <h3 className="mb-3">Welcome back!</h3>
@@ -56,7 +56,9 @@ const Login = () => {
 
               <div className="d-grid gap-2 mt-4">
                 <button type="submit" className="border p-1 rounded-2 signbackcolor text-white fw-bold">Login</button>
+                
               </div>
+
             </form>
 
             <p className="mt-3 text-center">

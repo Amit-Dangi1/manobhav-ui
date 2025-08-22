@@ -45,11 +45,14 @@ const Header = () => {
                     <li className="nav-item">
                         <Link className="nav-link me-5 nav-link-custom " to="/about">About</Link>
                     </li>
+                        <li className="nav-item">
+                        <Link className="nav-link me-5 nav-link-custom " to="/features">Features</Link>
+                    </li>
                     <li className="nav-item">
                         <Link className="nav-link  me-5nav-link-custom me-5 " to="/contact">Contact Us</Link>
                     </li>
                     <li className="nav-item d-flex align-items-center mt-2 mt-lg-0 me-5">
-                      {!isUserExit()?<><button className="btn btn-signup-custom btn1 rounded-5 me-5" type="button"><Link className='text-dark text-decoration-none' to="/signup">Sign Up</Link></button><button className="btn btn-login-custom btn1 rounded-5  me-5" type="button"><Link className='text-dark text-decoration-none' to="/login">Login</Link></button></> 
+                      {!isUserExit()?<><button className="btn btn-signup-custom btn1 rounded-5 me-5" type="button"><Link className='text-dark   text-decoration-none ' to="/signup">Sign Up</Link></button><button className="btn btn-login-custom btn1 rounded-5  me-5" type="button"><Link className='text-dark text-decoration-none' to="/login">Login</Link></button></> 
                                     :<button onClick={logout} className="btn btn-login-custom btn1 rounded-5  me-5" type="button">SignOut</button>
 }  
                     </li>

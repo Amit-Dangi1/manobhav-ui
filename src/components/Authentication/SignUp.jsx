@@ -58,8 +58,9 @@ const SignUp = () => {
                 <input onChange={(event)=>setuser({...user,age:event.target.value})} type="text" placeholder='Enter Age' className="form-control mb-3"/>
 
                 <button type='submit' className=' border p-1 rounded-2 signbackcolor fw-bolder w-100 mb-3 text-white'>SignUp</button>
-
+ 
                 <p className="text-center">Have an account? <Link to='/login'>Sign In</Link></p>
+
               </form>
             </div>
 

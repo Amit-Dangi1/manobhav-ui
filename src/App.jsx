@@ -15,6 +15,10 @@ import Login from './components/Authentication/Login'
 import Auth from './components/Auth/Auth'
 import ContactUs from './components/Home/ContactUs'
 import About from './components/Home/About'
+import ScoreFrom from './components/features/ScoreFrom'
+import Feature from './components/features/feature'
+import Excersice from './components/features/Excersice'
+import Journal from './components/features/Journal'
 
 function App() {
  
@@ -28,6 +32,11 @@ function App() {
       <Route path='/about' element={<><Header/><About/> <Footer/></>}/>
       <Route path='/form' element={<><Header/> <Auth><Form/></Auth> <Footer/></>}/>
       <Route path='/result' element={<><Header/> <Auth><Result/></Auth> <Footer/></>}/>
+      <Route path='/features' element={<><Header/><Auth> <Feature/></Auth> <Footer/></>}/>
+      <Route path='/moodtracking' element={<><Header/><Auth><ScoreFrom/></Auth> <Footer/></>}/>
+      <Route path='/exercise' element={<><Header/><Auth><Excersice/></Auth> <Footer/></>}/>
+      <Route path='/journal' element={<><Header/><Auth><Journal/></Auth> <Footer/></>}/>
+      
        {/* <Route path='/result' element={<><Result/></>}/> */}
      </Routes>
     </>

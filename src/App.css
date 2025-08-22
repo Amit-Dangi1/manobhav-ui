@@ -41,12 +41,14 @@
   color: #888;
 } */
 .btn1{
-  background-color: #87CEEB;
+  background-color: #87CEEB !important;
   font-weight: 500;
+  
   
 }
 .manobahv{
-  color: #33b8b8;
+  color: #33b8b8 !important;
+  
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 .heal1{
@@ -58,7 +60,7 @@
   line-height: 35px;
 }
 .you{
-   color:#33b8b8 ;
+   color:#33b8b8!important ;
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 body{
@@ -121,5 +123,9 @@ background-color: #87CEEB;
   font-weight: 500;
  }
  .signbackcolor{
-  background-color: #6ccccc;
+  background-color: #6ccccc !important;
+
+ }
+ .btncolor{
+  background-color: #33b8b8;
  }

@@ -6,5 +6,10 @@ export  const API = {
    response:BASE_URL+"predict/",
    userbehaviour:BASE_URL+"userbehaviour/",
    contact:BASE_URL+"contact/",
+   excercise:BASE_URL+"admin/excercise/allexcercise",
+   getscore:BASE_URL+"score/check_score/",
    logout:BASE_URL+"user/logout/",
+   journal:BASE_URL+"journal/add",
+   getjournal:BASE_URL+"journal/find",
+   deletejournal:BASE_URL+"journal/remove/",
 };
