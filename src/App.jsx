@@ -19,6 +19,7 @@ import ScoreFrom from './components/features/ScoreFrom'
 import Feature from './components/features/Feature2'
 import Excersice from './components/features/Excersice'
 import Journal from './components/features/Journal'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
  
