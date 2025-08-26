@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:3000/";
+const BASE_URL = "https://manobhav-emotion-analyzer.onrender.com/";
 export  const API = {
    signup:BASE_URL+"user/create",
    login:BASE_URL+"user/login",
