@@ -12,4 +12,5 @@ export  const API = {
    journal:BASE_URL+"journal/add",
    getjournal:BASE_URL+"journal/find",
    deletejournal:BASE_URL+"journal/remove/",
+   signupsuccess:BASE_URL+"user/verification"
 };

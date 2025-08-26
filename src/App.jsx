@@ -20,6 +20,8 @@ import Feature from './components/features/Feature2'
 import Excersice from './components/features/Excersice'
 import Journal from './components/features/Journal'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SignupSuccess from './components/Authentication/SignUpSuccess'
+import { API } from '../apis/Api'
 
 function App() {
  
@@ -37,6 +39,7 @@ function App() {
       <Route path='/moodtracking' element={<><Header/><Auth><ScoreFrom/></Auth> <Footer/></>}/>
       <Route path='/exercise' element={<><Header/><Auth><Excersice/></Auth> <Footer/></>}/>
       <Route path='/journal' element={<><Header/><Auth><Journal/></Auth> <Footer/></>}/>
+      <Route path ="/ss" element={<><SignupSuccess/></>}/>
       
        {/* <Route path='/result' element={<><Result/></>}/> */}
      </Routes>

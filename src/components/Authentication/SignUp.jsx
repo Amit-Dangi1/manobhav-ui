@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { API } from '../../../apis/Api';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
+import SignupSuccess from './SignUpSuccess';
 
 
  
@@ -18,15 +19,22 @@ const SignUp = () => {
   });
   const handelSubmit = async(e)=>{
     e.preventDefault()
-     
+   
      try {
-    let response = await axios.post("http://localhost:3000/user/create",user);
+    let response = await axios.post(API.signup,user);
     console.log("React Response = ",response);
-    toast.success("SignUp Succefull...");
-       setTimeout(()=>{
-      navigate("/");
-      },4000)
-      
+    toast.success(response.data.message);
+    setuser({
+    name:"",
+    email:"",
+    age:"",
+    password:""
+  }) 
+    // toast.success("SignUp Succefull...");
+      //  setTimeout(()=>{
+      // navigate("/");
+      // },4000)
+     
     } catch (error) {
       
         toast.error(error.response.data.message)
@@ -46,16 +54,16 @@ const SignUp = () => {
                 <h3 className="mb-4">Get Started Now</h3>
 
                 <label className='bold'>Name</label><br />
-                <input onChange={(event)=>setuser({...user,name:event.target.value})} type="text" placeholder='Enter your name' className="form-control mb-3"/>
+                <input value={user.name} onChange={(event)=>setuser({...user,name:event.target.value})} type="text" placeholder='Enter your name' className="form-control mb-3" required/>
 
                 <label className='bold'>Email</label><br />
-                <input onChange={(event)=>setuser({...user,email:event.target.value})} type="email" placeholder='Enter your email' className="form-control mb-3"/>
+                <input value={user.email} onChange={(event)=>setuser({...user,email:event.target.value})} type="email" placeholder='Enter your email' className="form-control mb-3" required/>
 
                 <label className='bold'>Password</label><br />
-                <input onChange={(event)=>setuser({...user,password:event.target.value})} type="password" placeholder='Enter your password' className="form-control mb-3"/>
+                <input value={user.password} onChange={(event)=>setuser({...user,password:event.target.value})} type="password" placeholder='Enter your password' className="form-control mb-3" required/>
 
                 <label className='bold'>Age</label><br />
-                <input onChange={(event)=>setuser({...user,age:event.target.value})} type="text" placeholder='Enter Age' className="form-control mb-3"/>
+                <input value={user.age} onChange={(event)=>setuser({...user,age:event.target.value})} type="text" placeholder='Enter Age' className="form-control mb-3" required/>
 
                 <button type='submit' className=' border p-1 rounded-2 signbackcolor fw-bolder w-100 mb-3 text-white'>SignUp</button>
  

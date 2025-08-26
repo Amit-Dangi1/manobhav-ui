@@ -83,6 +83,8 @@ console.log("Score data = ",res.data.score);
  
   
   <div className="container py-5 pt-5 mt-5">
+
+    <div className="display-5 m-4 text-center">"Your Score is a Step Towards Support and Care"</div>
       <div className="card shadow-lg border-0 rounded-4">
         <div className="card-body p-5">
           <h2 className="text-center mb-4 fw-bold text-primary">
