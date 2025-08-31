@@ -4,10 +4,12 @@ import { toast } from "react-toastify/unstyled";
 import { ToastContainer } from "react-toastify";
 import axios from "axios";
 import { API } from "../../../apis/Api";
+import { useNavigate } from "react-router-dom";
 
 const ScoreForm = () => {
   let[scoredata,setscoredata] = useState();
     const [error, setError] = useState("");
+    let navigate = useNavigate();
   
   const questions = [
     "1. Little interest or pleasure in doing things?",
@@ -76,7 +78,11 @@ console.log("Score data = ",res.data.score);
       toast.error("Something went wrong")
       
     }
-  }
+  };
+
+  const back1 = ()=>{
+    return navigate(-1);
+  };
 
   return (
     <>
@@ -85,6 +91,8 @@ console.log("Score data = ",res.data.score);
   <div className="container py-5 pt-5 mt-5">
 
     <div className="display-5 m-4 text-center">"Your Score is a Step Towards Support and Care"</div>
+            <button onClick={back1} className='btn manobahv border bg-light fw-semibold mb-3'>Back</button>
+
       <div className="card shadow-lg border-0 rounded-4">
         <div className="card-body p-5">
           <h2 className="text-center mb-4 fw-bold text-primary">

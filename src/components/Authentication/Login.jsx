@@ -25,6 +25,7 @@ const Login = () => {
     }
   }
 
+  
   return (
     <>
       <ToastContainer />
@@ -48,6 +49,7 @@ const Login = () => {
                   placeholder="Enter email"
                   required
                 />
+                
               </div>
 
               <div className="mb-3">
@@ -60,11 +62,16 @@ const Login = () => {
                   placeholder="Enter password"
                   required
                 />
+              
+                 <Link className='text-primary text-decoration-none ' to="/forgotpassword">Forgot Password</Link>
+
               </div>
 
               <div className="d-grid gap-2 mt-4">
                 <button type="submit" className="border p-1 rounded-2 signbackcolor text-white fw-bold">Login</button>
               </div>
+              <button className='mt-2 btn manobahv border bg-light fw-semibold mb-3' onClick={()=>navigate("/")}>Back</button>
+
             </form>
 
             <p className="mt-3 text-center">

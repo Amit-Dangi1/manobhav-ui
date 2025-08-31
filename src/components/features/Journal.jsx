@@ -2,11 +2,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify/unstyled';
 import { API } from '../../../apis/Api';
+import { useNavigate } from 'react-router-dom';
  
 const Journal = () => {
   let [entry, setentry] = useState("");
   let [data, setdata] = useState([]);
-
+let navigate = useNavigate();
   
   const handelSubmit = async () => {
     try {
@@ -25,7 +26,7 @@ const Journal = () => {
 
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrongb Add");
+      toast.error("Something went wrong Add");
     }
   };
 
@@ -49,22 +50,31 @@ const Journal = () => {
 
  
   const deletentry = async (index) => {
+
     try {
+      let isDelete = window.confirm("Are you sure you want to delete?")
+      if(isDelete){
       await axios.delete(`${API.deletejournal}${index}`,{
       withCredentials:true
     });
       toast.success("Entry deleted");
       entrydata();  
-    } catch (error) {
+    }} catch (error) {
       console.log(error);
       toast.error("Something went Wrong delete");
     }
   };
-
+const back1 = ()=>{
+    return navigate(-1);
+  };
   return (
     <>
     <ToastContainer/>
+
        <div className="d-flex flex-column justify-content-center align-items-center vh-100">
+                               <button onClick={back1} className='btn manobahv border bg-light fw-semibold mb-3'>Back</button>
+
+        
         <div className="display-5 mb-4 text-primary fw-bold">
           Your Personal Journal
         </div>
@@ -78,19 +88,13 @@ const Journal = () => {
             value={entry}
             onChange={(e) => setentry(e.target.value)}
           ></textarea>
-          <button
-            type="button"
-            onClick={handelSubmit}
-            className="btn btn-info fw-bold w-25"
-          >
-            Save Entry
-          </button>
+          <button  type="button" onClick={handelSubmit} className="btn btn-info fw-bold">Save Entry</button>
         </div>
       </div>
 
        <div className="container ">
         <h4>Your Journal Entries</h4>
-        {data.length === 0 ? (
+        {data?.length === 0 ? (
           <p className="text-muted">
             No entries yet. Start writing your first entry.
           </p>
@@ -99,7 +103,7 @@ const Journal = () => {
             {data?.map((item, index) => (
               <li
                 key={index}
-                className="  mt-3 p-4 rounded-start-pill list-group-item d-flex justify-content-between align-items-center border shadow w-50"
+                className="  mt-3 p-4  rounded-start-pill list-group-item d-flex justify-content-between align-items-center   shadow w-50"
               >
                 <span className='lead'>{item}</span>
                 <button
@@ -107,7 +111,7 @@ const Journal = () => {
                   onClick={() => deletentry(index)}
                 >
                  <i className="bi bi-trash-fill">
-                  +
+                  
                  </i>
                 </button>
               </li>

@@ -1,5 +1,5 @@
 
-const BASE_URL = "https://manobhav-emotion-analyzer.onrender.com/";
+const BASE_URL = "http://localhost:3000/";
 export  const API = {
    signup:BASE_URL+"user/create",
    login:BASE_URL+"user/login",
@@ -12,5 +12,9 @@ export  const API = {
    journal:BASE_URL+"journal/add",
    getjournal:BASE_URL+"journal/find",
    deletejournal:BASE_URL+"journal/remove/",
-   signupsuccess:BASE_URL+"user/verification"
+   signupsuccess:BASE_URL+"user/verification",
+   sendmailforpassword:BASE_URL+"user/setpassword",
+   updatepassword2:BASE_URL+"user/password/set-password2",
+   updatepassword3:BASE_URL+"user/passwordupdated"
+
 };

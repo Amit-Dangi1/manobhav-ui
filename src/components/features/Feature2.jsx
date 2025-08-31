@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import mtracking from "../../assets/mtracking.jpg";
 import excersice from "../../assets/excersice.jpg"
  import journal from "../../assets/journal.jpg";
 
 
 const Feature2 = () => {
+
+  let navigate = useNavigate();
+
+  let backbtn = ()=>{
+    return navigate(-1);
+  }
+
   return (
     <>
     <div className='text-center mt-5 pt-5 '>
@@ -13,6 +20,7 @@ const Feature2 = () => {
         <p className='lead'>Discover tools and features designed to support your mental health and emotional well-being</p>
     </div>
       <div className='container mt-5 pt-5'>
+        <button onClick={backbtn} className='btn manobahv border bg-light fw-semibold'>Back</button>
         <div className='row'>
             <div className='col-lg-4 col-md-6 ' >
                 <Link className='text-decoration-none' to="/moodtracking">

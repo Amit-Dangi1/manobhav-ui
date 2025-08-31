@@ -42,12 +42,22 @@ const handelClick = async(event)=>{
         <h1 className='display-6 text-center mt-5 '>How Are You Feeling Today</h1>
         <p className="text-muted text-center">Let’s understand your manobhav... choose any number from 1 to 10.</p>
 
+<p className="text-sm text-gray-600 mb-2">
+  Confused about what each level (1-10) means?{" "}
+  <Link to="/levels" className="text-blue-600 underline hover:text-blue-800">
+    Click here to understand the Levels
+  </Link>{" "}
+ 
+</p>
+    <button className="btn manobahv border bg-light fw-semibold " onClick={()=>navigate(-1)} type="button">Back</button>
+
         <div className='row'>
             <div className='col-lg-6 col-md-6 col-sm-12'>
                 <img className='w-100' src={form1} alt="" />
             </div>
 
             <div className='col-lg-6 col-md-6 col-sm-12 mt-5 pt-3'>
+              
                <form action="" onSubmit={handelClick}>
                 <span className=''>Mood Level : </span><input onChange={(event)=>{if(event.target.value === "" ||(event.target.value>=1 && event.target.value<=10)){setform({...form,moodlevel:event.target.value})}}} className='inputborder mx-5 shadow-sm w-25' type="number" name="moodlevel" id="" min="1" max="10" placeholder='1 to 10' required/><br /><br />
                 <span className=''>Sleep Hours :</span><input onChange={(event)=>{if(event.target.value === "" ||(event.target.value>=1 && event.target.value<=10)){setform({...form,sleepHours:event.target.value})}}} className='inputborder mx-5 shadow-sm w-25' type="number" name="sleepHours" id="" min="1" max="10" placeholder='1 to 10'required/><br /><br />

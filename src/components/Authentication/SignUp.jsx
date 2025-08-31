@@ -70,6 +70,8 @@ const SignUp = () => {
                 <p className="text-center">Have an account? <Link to='/login'>Sign In</Link></p>
 
               </form>
+               <button className='mt-2 btn manobahv border bg-light fw-semibold mb-3' onClick={()=>navigate("/")}>Back</button>
+
             </div>
 
        

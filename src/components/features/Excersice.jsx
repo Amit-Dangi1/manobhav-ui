@@ -2,9 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { API } from '../../../apis/Api';
+import { useNavigate } from 'react-router-dom';
 
 const Excersice = () => {
   let [excersice, setexcercise] = useState([]);
+  let navigate = useNavigate();
 
   let fetch = async () => {
     try {
@@ -21,19 +23,25 @@ const Excersice = () => {
     fetch();
   }, []);
 
-  console.log("State = ", excersice);
+  // console.log("State = ", excersice);
+
+   const back1 = ()=>{
+    return navigate(-1);
+  };
 
   return (
     <>
       <ToastContainer />
       <h3 className="mt-5 pt-5 display-4 text-center">Exercise & Wellness Hub</h3>
       <div className="container mt-5">
+            <button onClick={back1} className='btn manobahv border bg-light fw-semibold'>Back</button>
+
         <div className="row">
           {excersice?.map((val, index) => {
             return (
-              <div className="col-lg-4 col-md-6 mt-5" key={index}>
+              <div className="col-lg-4 col-md-6 mt-5 " key={index}>
                 <div
-                  className="card h-100 shadow-sm"
+                  className="card  h-100 shadow-sm"
                   style={{ borderRadius: "15px", overflow: "hidden" }}
                 >
                   {/* Image */}

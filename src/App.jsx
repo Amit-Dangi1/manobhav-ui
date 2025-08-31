@@ -22,6 +22,9 @@ import Journal from './components/features/Journal'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignupSuccess from './components/Authentication/SignUpSuccess'
 import { API } from '../apis/Api'
+import SendMailPassword from './components/Authentication/SendMailPassword'
+import ResetPassword from './components/Authentication/ResetPassword'
+import LevelsInfo from './components/Form/LevelsInfo'
 
 function App() {
  
@@ -40,6 +43,11 @@ function App() {
       <Route path='/exercise' element={<><Header/><Auth><Excersice/></Auth> <Footer/></>}/>
       <Route path='/journal' element={<><Header/><Auth><Journal/></Auth> <Footer/></>}/>
       <Route path ="/ss" element={<><SignupSuccess/></>}/>
+      <Route path='/forgotpassword' element={<SendMailPassword/>}/>
+      <Route path='/set-password2' element={<ResetPassword/>}/>
+      <Route path='/levels' element={<><Header/><Auth><LevelsInfo/></Auth> <Footer/></>}/>
+
+      
       
        {/* <Route path='/result' element={<><Result/></>}/> */}
      </Routes>
