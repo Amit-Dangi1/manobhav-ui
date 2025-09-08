@@ -21,6 +21,7 @@ const Header = () => {
         Cookies.remove('token');
         sessionStorage.getItem("current-user","");
         sessionStorage.clear();
+        toast.success("Successfully SignOut ")
         navigate("/");     
         } catch (error) {
             toast.error(error.log.message)

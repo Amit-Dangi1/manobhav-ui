@@ -1,5 +1,5 @@
 import React from 'react'
-import about from "../../assets/about2.png";
+import about from "../../assets/about3.png";
 import mern from "../../assets/mern.png";
 import "./About.css"
 
@@ -9,7 +9,7 @@ const About = () => {
     <>
     <div className='container-fluid about1 justify-content-center align-content-center '><p className='text-center text-white display-6 font1 shadow-lg lead mt-5 p-3'>Start your journey to self-discovery and inner peace</p></div>
       <div className="container mt-5 pt-5 pb-5">
-            <div className='container'><img className='w-100' src={mern}/></div>
+            <div className='container text-center'><img className='w-50' src={about}/></div>
 
   <h2 className="text-center mb-4">About Us</h2>
   <p className="lead text-center">

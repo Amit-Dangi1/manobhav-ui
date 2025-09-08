@@ -13,6 +13,7 @@ const Footer = () => {
             <div className='row'>
             <div className='col-lg-4 col-md-6 col-sm-12 text-center'>
                <Link   className="navbar-brand navbar-brand-custom mx-5 manobahv bg-light p-3 rounded-3" to="/">MANOBHAV</Link>
+               
                <p className="mt-4">Your mental health journey matters – every small step counts.Your journey isn’t about speed; it’s about keeping going.</p>
                <p><a href=""><img className="social" src={tw} alt=""  /></a> <a href=""><img className="social"  src={in1} alt="" /></a>
                <a href=""><img className="social"  src={ins} alt=""  /></a></p></div>

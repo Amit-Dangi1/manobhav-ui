@@ -34,7 +34,7 @@ const SendMailPassword = () => {
     
     <h4 className="mb-2 fw-semibold text-center">Forgot your password?</h4>
     <p className="text-muted mb-4 text-center">
-      Enter your registered email address below. We will send you a link on your email to reset your password securely.
+      Enter your registered email address and new password below. We will send you a link on your email to reset your password securely.
     </p>
 <form onSubmit={send1}>
     <div className="d-flex flex-column text-center">

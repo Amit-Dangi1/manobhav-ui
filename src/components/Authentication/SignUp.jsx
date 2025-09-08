@@ -51,7 +51,8 @@ const SignUp = () => {
             {/* Left Side - Form */}
             <div className='col-lg-6 border p-5 rounded-5 '>
               <form onSubmit={handelSubmit}>
-                <h3 className="mb-4">Get Started Now</h3>
+                <h3 className="">Get Started Now</h3>
+                <p className='text-danger'>"Please fill in all required fields"</p>
 
                 <label className='bold'>Name</label><br />
                 <input value={user.name} onChange={(event)=>setuser({...user,name:event.target.value})} type="text" placeholder='Enter your name' className="form-control mb-3" required/>
